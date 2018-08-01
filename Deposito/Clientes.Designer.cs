@@ -56,6 +56,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -192,7 +194,7 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(672, 371);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
@@ -210,6 +212,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cmbEstado);
+            this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.txtObs);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.txtEmail);
@@ -230,7 +234,7 @@
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(672, 371);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nuevo Cliente";
@@ -346,6 +350,29 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Clientes";
             // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Enabled = false;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Desactivado"});
+            this.cmbEstado.Location = new System.Drawing.Point(442, 189);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(191, 21);
+            this.cmbEstado.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(356, 194);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 16);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Estado:";
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,5 +424,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Label label10;
     }
 }

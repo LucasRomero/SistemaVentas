@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace Deposito
 {
     class Gestion
@@ -21,7 +22,13 @@ namespace Deposito
             cmd.CommandText = nombresp;
             cmd.CommandType = CommandType.StoredProcedure;
             //SqlDataReader dr = cmd.ExecuteReader(); // ver como hacer para devolver un verdadero o falso, por q no esta funcionando 
-            rpta = cmd.ExecuteNonQuery() == 1 ? "OK" : "Error";
+            try {
+                rpta = cmd.ExecuteNonQuery() == 1 ? "OK" : "Error";
+            } catch (Exception e)
+            {
+                
+            }
+            
             return rpta;
         }
 
@@ -76,7 +83,27 @@ namespace Deposito
            rpta = EjecutarProcedimientoAlmacenado(comando, "InsertarUsuarios");
             return rpta;
         }
+        public DataTable BuscarUsuario(string textobuscar)
+        {
+            Datos ad = new Datos();
+            DataTable Usuario = new DataTable("usuarios");
+            SqlCommand cmd = new SqlCommand();
+            ArmarProcedimientoBuscarUsuario(ref cmd, textobuscar);
+            cmd.Connection = ad.ObtenerConexion();
+            cmd.CommandText = "spBuscar_Usuario";
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+            SqlDat.Fill(Usuario);
+            return Usuario;
+        }
+
+        public void ArmarProcedimientoBuscarUsuario(ref SqlCommand comando, string textobuscar)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = comando.Parameters.Add("@textobuscar", SqlDbType.VarChar, 50);
+            SqlParametros.Value = textobuscar;
+        }
 
         public DataTable MostrarCategorias()
         {
@@ -206,17 +233,17 @@ namespace Deposito
             comando.Parameters.Add(SqlParametros);
         }
         // insertar productos
-        public string InsertarProducto(string nombre, int codcategoria,string stock,string puntopedido,string cantminima,double precioU)
+        public string InsertarProducto(string nombre, int codcategoria,string stock,string puntopedido,string cantminima,double precioU,int estado)
         {
             string rpta = "";
             Gestion gestion = new Gestion();
             SqlCommand comando = new SqlCommand();
-            ArmarProcedimientoNuevoProducto(ref comando, nombre, codcategoria,stock,puntopedido,cantminima, precioU);
+            ArmarProcedimientoNuevoProducto(ref comando, nombre, codcategoria,stock,puntopedido,cantminima, precioU,estado);
             rpta = EjecutarProcedimientoAlmacenado(comando, "spInsertar_Producto");
             return rpta;
         }
         // proc nuevo producto
-        public void ArmarProcedimientoNuevoProducto(ref SqlCommand comando, string nombre, int codcategoria, string stock, string puntopedido, string cantminima, double precioU)
+        public void ArmarProcedimientoNuevoProducto(ref SqlCommand comando, string nombre, int codcategoria, string stock, string puntopedido, string cantminima, double precioU,int estado)
         {
            /* SqlParameter parID = new SqlParameter();
             parID.ParameterName = "@idarticulo";
@@ -255,7 +282,7 @@ namespace Deposito
             ParCantMinima.ParameterName = "@cantminima";
             ParCantMinima.SqlDbType = SqlDbType.VarChar;
             ParCantMinima.Size = 30;
-            ParCantMinima.Value = puntopedido;
+            ParCantMinima.Value = cantminima;
             comando.Parameters.Add(ParCantMinima);
 
             SqlParameter ParPU = new SqlParameter();
@@ -263,20 +290,26 @@ namespace Deposito
             ParPU.SqlDbType = SqlDbType.Float;
             ParPU.Value = precioU;
             comando.Parameters.Add(ParPU);
+
+            SqlParameter ParEstado = new SqlParameter();
+            ParEstado.ParameterName = "@estado";
+            ParEstado.SqlDbType = SqlDbType.Int;
+            ParEstado.Value = estado;
+            comando.Parameters.Add(ParEstado);
         }
 
-        public string EditarProducto(int id,string nombre, int codcategoria, string stock, string puntopedido, string cantminima)
+        public string EditarProducto(int id,string nombre, int codcategoria, string stock, string puntopedido, string cantminima, double precioU,int estado)
         {
             string rpta = "";
             Gestion gestion = new Gestion();
             SqlCommand comando = new SqlCommand();
-            ArmarProcedimientoEditarProducto(ref comando, id, nombre, codcategoria,stock,puntopedido,cantminima);
+            ArmarProcedimientoEditarProducto(ref comando, id, nombre, codcategoria,stock,puntopedido,cantminima,precioU,estado);
             rpta = EjecutarProcedimientoAlmacenado(comando, "spEditar_Producto");
             return rpta;
 
         }
 
-        public void ArmarProcedimientoEditarProducto(ref SqlCommand comando,int id, string nombre, int codcategoria, string stock, string puntopedido, string cantminima)
+        public void ArmarProcedimientoEditarProducto(ref SqlCommand comando,int id, string nombre, int codcategoria, string stock, string puntopedido, string cantminima,double precioU,int estado)
         {
             SqlParameter parID = new SqlParameter();
             parID.ParameterName = "@idarticulo";
@@ -317,6 +350,18 @@ namespace Deposito
             ParCantMinima.Size = 30;
             ParCantMinima.Value = cantminima;
             comando.Parameters.Add(ParCantMinima);
+
+            SqlParameter ParPU = new SqlParameter();
+            ParPU.ParameterName = "@PrecioU";
+            ParPU.SqlDbType = SqlDbType.Float;
+            ParPU.Value = precioU ;
+            comando.Parameters.Add(ParPU);
+
+            SqlParameter ParEstado = new SqlParameter();
+            ParEstado.ParameterName = "@estado";
+            ParEstado.SqlDbType = SqlDbType.Int;
+            ParEstado.Value = estado;
+            comando.Parameters.Add(ParEstado);
         }
 
         public string EliminarProducto(int id)
@@ -367,17 +412,17 @@ namespace Deposito
         }
 
         // cliente insertar
-        public string InsertarCliente(string cuit, string nombre, string telefono, string direc, string localidad,string email,string obs)
+        public string InsertarCliente(string cuit, string nombre, string telefono, string direc, string localidad,string email,string obs,int estado)
         {
             string rpta = "";
             Gestion gestion = new Gestion();
             SqlCommand comando = new SqlCommand();
-            ArmarProcedimientoNuevoCliente(ref comando, cuit, nombre, telefono, direc, localidad,email,obs);
+            ArmarProcedimientoNuevoCliente(ref comando, cuit, nombre, telefono, direc, localidad,email,obs,estado);
             rpta = EjecutarProcedimientoAlmacenado(comando, "spInsertarCliente");
             return rpta;
         }
         // proc nuevo producto
-        public void ArmarProcedimientoNuevoCliente(ref SqlCommand comando, string cuit, string nombre, string telefono, string direc, string localidad,string email, string obs)
+        public void ArmarProcedimientoNuevoCliente(ref SqlCommand comando, string cuit, string nombre, string telefono, string direc, string localidad,string email, string obs,int estado)
         {
              SqlParameter parID = new SqlParameter();
              parID.ParameterName = "@cuit";
@@ -428,20 +473,26 @@ namespace Deposito
             ParObs.Value = obs;
             comando.Parameters.Add(ParObs);
 
+            SqlParameter ParEstado = new SqlParameter();
+            ParEstado.ParameterName = "@estado";
+            ParEstado.SqlDbType = SqlDbType.Int;
+            ParEstado.Value = estado;
+            comando.Parameters.Add(ParEstado);
+
         }
 
-        public string EditarCliente(string cuit, string nombre, string telefono, string direc, string localidad, string email, string obs)
+        public string EditarCliente(string cuit, string nombre, string telefono, string direc, string localidad, string email, string obs,int estado)
         {
             string rpta = "";
             Gestion gestion = new Gestion();
             SqlCommand comando = new SqlCommand();
-            ArmarProcedimientoEditarCliente(ref comando, cuit, nombre, telefono, direc, localidad, email, obs);
+            ArmarProcedimientoEditarCliente(ref comando, cuit, nombre, telefono, direc, localidad, email, obs, estado);
             rpta = EjecutarProcedimientoAlmacenado(comando, "spEditar_Cliente");
             return rpta;
 
         }
 
-        public void ArmarProcedimientoEditarCliente(ref SqlCommand comando, string cuit, string nombre, string telefono, string direc, string localidad, string email, string obs)
+        public void ArmarProcedimientoEditarCliente(ref SqlCommand comando, string cuit, string nombre, string telefono, string direc, string localidad, string email, string obs,int estado)
         {
             SqlParameter parID = new SqlParameter();
             parID.ParameterName = "@cuit";
@@ -491,6 +542,12 @@ namespace Deposito
             ParObs.Size = 250;
             ParObs.Value = obs;
             comando.Parameters.Add(ParObs);
+
+            SqlParameter ParEstado = new SqlParameter();
+            ParEstado.ParameterName = "@estado";
+            ParEstado.SqlDbType = SqlDbType.Int;
+            ParEstado.Value = estado;
+            comando.Parameters.Add(ParEstado);
         }
 
         public string EliminarCliente(string cuit)
@@ -682,5 +739,8 @@ namespace Deposito
             SqlParametros.Value = patente;
             comando.Parameters.Add(SqlParametros);
         }
+
+
+
     }
 }

@@ -14,6 +14,7 @@ namespace Deposito
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
+        int estado;
 
         public Clientes()
         {
@@ -26,6 +27,12 @@ namespace Deposito
             Habilitar(false);
             dataClientes.Columns[0].Visible = false;
             nombresdecolumnas();
+        }
+
+        public void agregarcmb()
+        {
+            cmbEstado.Items.Add("Activo");
+            cmbEstado.Items.Add("Desactivado");
         }
 
         private void nombresdecolumnas()
@@ -59,6 +66,7 @@ namespace Deposito
             txtLocalidad.ReadOnly = !valor;
             txtEmail.ReadOnly = !valor;
             txtObs.ReadOnly = !valor;
+            cmbEstado.Enabled = valor;
         }
 
         public void Mostrar()
@@ -112,25 +120,34 @@ namespace Deposito
 
             Gestion ges = new Gestion();
             string rpta = "";
-            if (txtNombre.Text == string.Empty)
+            if (txtNombre.Text == string.Empty || cmbEstado.Text == string.Empty)
             {
                 MensajeError("Falta Ingresar algunos datos");
             }
             else
             {
+                if (cmbEstado.SelectedItem.ToString() == "Activo")
+                {
+                    estado = 1;
+                }
+                if (cmbEstado.SelectedItem.ToString() == "Desactivado")
+                {
+                    estado = 0;
+                }
+
                 if (IsNuevo)
                 {
 
                     //respuesta = ges.InsertarCategoria(txtNombre.Text.Trim().ToUpper(), txtDescripcion.Text.Trim()); HACER ESTO sque insertarcodigo devuelva el string ese si esta bien o no el cargado 
                     rpta = ges.InsertarCliente(txtCuit.Text.Trim(),
                          txtNombre.Text.Trim().ToUpper(),txtTelefono.Text,txtDirecc.Text,
-                         txtLocalidad.Text,txtEmail.Text,txtObs.Text);
+                         txtLocalidad.Text,txtEmail.Text,txtObs.Text,estado);
                 }
                 else
                 {
                     rpta = ges.EditarCliente(txtCuit.Text.Trim(),
                          txtNombre.Text.Trim().ToUpper(), txtTelefono.Text, txtDirecc.Text,
-                         txtLocalidad.Text, txtEmail.Text, txtObs.Text);
+                         txtLocalidad.Text, txtEmail.Text, txtObs.Text,estado);
                 }
                 if (rpta.Equals("OK"))
                 {
@@ -182,11 +199,15 @@ namespace Deposito
 
         private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataClientes.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell chkEliminar = (DataGridViewCheckBoxCell)dataClientes.Rows[e.RowIndex].Cells["Eliminar"];
-                chkEliminar.Value = !Convert.ToBoolean(chkEliminar.Value);
-            }
+            txtCuit.Text = Convert.ToString(dataClientes.CurrentRow.Cells["cuit"].Value);
+            txtNombre.Text = Convert.ToString(dataClientes.CurrentRow.Cells["nombre"].Value);
+            txtTelefono.Text = Convert.ToString(dataClientes.CurrentRow.Cells["telefono"].Value);
+            txtDirecc.Text = Convert.ToString(dataClientes.CurrentRow.Cells["direccion"].Value);
+            txtLocalidad.Text = Convert.ToString(dataClientes.CurrentRow.Cells["localidad"].Value);
+            txtEmail.Text = Convert.ToString(dataClientes.CurrentRow.Cells["email"].Value);
+            txtObs.Text = Convert.ToString(dataClientes.CurrentRow.Cells["observacion"].Value);
+            cmbEstado.SelectedValue = Convert.ToString(dataClientes.CurrentRow.Cells["estado"].Value);
+            tabControl1.SelectedIndex = 1;
         }
 
         private void dataClientes_DoubleClick(object sender, EventArgs e)

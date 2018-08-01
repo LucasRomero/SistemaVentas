@@ -71,10 +71,6 @@ namespace Deposito
                 btnCancelar.Enabled = false;
             }
         }
-        public void OcultarColumnas()
-        {
-            dataUsuarios.Columns[0].Visible = false;
-        }
         public void MensajeError(String mensaje)
         {
             MessageBox.Show(mensaje, " Error ", MessageBoxButtons.OK);
@@ -90,7 +86,6 @@ namespace Deposito
         }
         public void Habilitar(bool valor) // si recibo true las cajas de texto dejan de ser ReadOnly y pueden editarse
         {
-
             txtDNI.ReadOnly = !valor;
             txtUsuario.ReadOnly = !valor;
             txtPass.ReadOnly = !valor;
@@ -245,7 +240,9 @@ namespace Deposito
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-
+            Gestion ges = new Gestion();
+            dataUsuarios.DataSource = ges.BuscarUsuario(txtBuscar.Text);
+            lbTotal.Text = "Total de Registros: " + Convert.ToString(dataUsuarios.Rows.Count);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -256,6 +253,15 @@ namespace Deposito
             Limpiar();
             Habilitar(true);
             txtDNI.Focus();
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo permiten numeros", "Advertencia");
+                e.Handled = true;
+            }
         }
     }
 }

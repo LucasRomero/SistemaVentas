@@ -27,9 +27,9 @@ namespace Deposito
             lbTotal.Text = "Total de Registros: " + Convert.ToString(dataCategorias.Rows.Count);
             Habilitar(false);
             Botones();
-            dataCategorias.Columns[0].Visible = false;
             nombresdecolumnas();
             Limpiar();
+            Mostrar();
         }
 
         private void CompletarCodCategoria()
@@ -103,10 +103,7 @@ namespace Deposito
             }
         }
 
-        public void SetearCodCategoria()
-        {
 
-        }
 
         public void OcultarColumnas()
         {
@@ -121,7 +118,6 @@ namespace Deposito
             Botones();
             Limpiar();
             Habilitar(true);
-            SetearCodCategoria();
             txtNombre.Focus();
             CompletarCodCategoria();
         }
@@ -146,7 +142,7 @@ namespace Deposito
                     
                     //respuesta = ges.InsertarCategoria(txtNombre.Text.Trim().ToUpper(), txtDescripcion.Text.Trim()); HACER ESTO sque insertarcodigo devuelva el string ese si esta bien o no el cargado 
                    rpta= ges.InsertarCategoria(txtNombre.Text.Trim().ToUpper(),
-                        txtDescripcion.Text.Trim());
+                        txtDescripcion.Text.Trim().ToUpper());
                 }
                 else
                 {

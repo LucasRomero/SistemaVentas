@@ -15,6 +15,7 @@ namespace Deposito
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
+        int estado;
 
         public Productos()
         {
@@ -49,11 +50,13 @@ namespace Deposito
         {
             dataProductos.Columns[0].HeaderText = "ID PRODUCTO";
             dataProductos.Columns[1].HeaderText = "NOMBRE PRODUCTO";
-            dataProductos.Columns[2].HeaderText = "CODIGO DE CATEGORIA";
-            dataProductos.Columns[3].HeaderText = "STOCK DISPONIBLE";
-            dataProductos.Columns[4].HeaderText = "PUNTO DE PEDIDO";
-            dataProductos.Columns[5].HeaderText = "CANTIDAD MINIMA PEDIDA";
-            dataProductos.Columns[6].HeaderText = "PRECIO UNITARIO";
+            dataProductos.Columns[2].HeaderText = "PRECIO UNITARIO";
+            dataProductos.Columns[3].HeaderText = "CODIGO DE CATEGORIA";
+            dataProductos.Columns[4].HeaderText = "STOCK";
+            dataProductos.Columns[5].HeaderText = "PUNTO DE PEDIDO";
+            dataProductos.Columns[6].HeaderText = "CANTIDAD MINIMA";
+            dataProductos.Columns[7].HeaderText = "ESTADO";
+            dataProductos.Columns[8].HeaderText = "NOMBRE CATEGORIA";
         }
 
         public void LlenarCMBCategorias()
@@ -84,9 +87,16 @@ namespace Deposito
             txtCantMinima.ReadOnly = !valor;
             txtstock.ReadOnly = !valor;
             txtPrecioU.ReadOnly = !valor;
+            cmbEstado.Enabled = valor;
         }
 
-        public void Botones()
+        public void agregarcmb()
+        {
+            cmbEstado.Items.Add("Activo");
+            cmbEstado.Items.Add("Desactivado");
+        }
+
+            public void Botones()
         {
             if (IsNuevo || IsEditar)
             {
@@ -107,8 +117,7 @@ namespace Deposito
         }
         public void OcultarColumnas()
         {
-            dataProductos.Columns[0].Visible = false;
-            dataProductos.Columns[2].Visible = false;
+            dataProductos.Columns[3].Visible = false;
         }
 
         public void MensajeError(String mensaje)
@@ -145,23 +154,33 @@ namespace Deposito
         {
             Gestion ges = new Gestion();
             string rpta = "";
-            if (txtNombre.Text == string.Empty || cmbCategoria.Text == string.Empty || txtCod.Text == string.Empty)
+
+           
+            if (txtNombre.Text == string.Empty || cmbCategoria.Text == string.Empty || txtCod.Text == string.Empty || cmbEstado.Text == string.Empty)
             {
                 MensajeError("Falta Ingresar algunos datos");
             }
             else
             {
+                if (cmbEstado.SelectedItem.ToString() == "Activo")
+                {
+                    estado = 1;
+                }
+                if (cmbEstado.SelectedItem.ToString() == "Desactivado")
+                {
+                    estado = 0;
+                }
                 if (IsNuevo)
                 {
                     //respuesta = ges.InsertarCategoria(txtNombre.Text.Trim().ToUpper(), txtDescripcion.Text.Trim()); HACER ESTO sque insertarcodigo devuelva el string ese si esta bien o no el cargado 
                     rpta = ges.InsertarProducto(txtNombre.Text.Trim().ToUpper(), Convert.ToInt32(cmbCategoria.SelectedValue), txtstock.Text,
-                        txtPuntopedido.Text, txtCantMinima.Text,Convert.ToDouble(txtPrecioU.Text));
+                        txtPuntopedido.Text, txtCantMinima.Text,Convert.ToDouble(txtPrecioU.Text), estado);
                 }
                 else
                 {
                     rpta = ges.EditarProducto(Convert.ToInt32(txtCod.Text),
                         txtNombre.Text.Trim().ToUpper(), Convert.ToInt32(cmbCategoria.SelectedValue), txtstock.Text,
-                        txtPuntopedido.Text, txtCantMinima.Text);
+                        txtPuntopedido.Text, txtCantMinima.Text, Convert.ToDouble(txtPrecioU.Text),estado);
                 }
                 if (rpta.Equals("OK"))
                 {
@@ -251,18 +270,10 @@ namespace Deposito
             cmbCategoria.SelectedValue = Convert.ToString(dataProductos.CurrentRow.Cells["cod_categoria"].Value);
             txtstock.Text = Convert.ToString(dataProductos.CurrentRow.Cells["stock"].Value);
             txtPuntopedido.Text = Convert.ToString(dataProductos.CurrentRow.Cells["punto_pedido"].Value);
-            txtCantMinima.Text = Convert.ToString(dataProductos.CurrentRow.Cells["cant_minima"].Value);   
+            txtCantMinima.Text = Convert.ToString(dataProductos.CurrentRow.Cells["cant_minima"].Value);
+            txtPrecioU.Text = Convert.ToString(dataProductos.CurrentRow.Cells["precio_unitario"].Value);
             tabControl1.SelectedIndex = 1;
         }
-
-       /* private void dataProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataProductos.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell chkEliminar = (DataGridViewCheckBoxCell)dataProductos.Rows[e.RowIndex].Cells["Eliminar"];
-                chkEliminar.Value = !Convert.ToBoolean(chkEliminar.Value);
-            }
-        }*/
 
         private void txtstock_KeyPress(object sender, KeyPressEventArgs e)
         {

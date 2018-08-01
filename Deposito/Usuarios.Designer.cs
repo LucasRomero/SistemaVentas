@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -43,13 +42,14 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -77,14 +77,6 @@
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Estado:";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Enabled = false;
-            this.txtPass.Location = new System.Drawing.Point(135, 127);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(212, 20);
-            this.txtPass.TabIndex = 11;
             // 
             // label5
             // 
@@ -197,18 +189,18 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtPass);
+            this.tabPage2.Controls.Add(this.txtUsuario);
+            this.tabPage2.Controls.Add(this.txtDNI);
             this.tabPage2.Controls.Add(this.cmbTipo);
             this.tabPage2.Controls.Add(this.cmbEstado);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.txtPass);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.btnEditar);
             this.tabPage2.Controls.Add(this.btnGuardar);
             this.tabPage2.Controls.Add(this.btnNuevo);
-            this.tabPage2.Controls.Add(this.txtUsuario);
-            this.tabPage2.Controls.Add(this.txtDNI);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -218,6 +210,28 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(135, 126);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(212, 20);
+            this.txtPass.TabIndex = 19;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(135, 83);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(212, 20);
+            this.txtUsuario.TabIndex = 18;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Location = new System.Drawing.Point(135, 30);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(212, 20);
+            this.txtDNI.TabIndex = 17;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // cmbTipo
             // 
@@ -279,22 +293,6 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(135, 84);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(212, 20);
-            this.txtUsuario.TabIndex = 4;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Enabled = false;
-            this.txtDNI.Location = new System.Drawing.Point(135, 35);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(212, 20);
-            this.txtDNI.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -340,7 +338,6 @@
         #endregion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEditar;
@@ -355,11 +352,12 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }
