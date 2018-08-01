@@ -1,0 +1,120 @@
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\bin\Debug\Deposito.exe
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\bin\Debug\Deposito.pdb
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.csprojResolveAssemblyReference.cache
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.exe
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.pdb
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\Pato\Desktop\programacion 3\Proyecto\Deposito\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\bin\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\bin\Debug\Deposito.pdb
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\progra 11 6\Deposito\Deposito\obj\Debug\Deposito.pdb
+C:\Users\Administrador\Desktop\WR\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\Administrador\Desktop\WR\Deposito\bin\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\WR\Deposito\bin\Debug\Deposito.pdb
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\WR\Deposito\obj\Debug\Deposito.pdb
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\bin\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\bin\Debug\Deposito.pdb
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.exe
+C:\Users\Administrador\Desktop\WR-Gestion\Deposito\obj\Debug\Deposito.pdb
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.exe
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.pdb
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csprojAssemblyReference.cache
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.exe
+C:\Users\wadef\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.pdb
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.exe.config
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.exe
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\bin\Debug\Deposito.pdb
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csprojResolveAssemblyReference.cache
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Camiones.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Clientes.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.inicio.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.MDIMenu.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Pedido.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Categorias.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Productos.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Properties.Resources.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Usuarios.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.Ventas.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.VistaArticulos.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.VistaClientes.resources
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.GenerateResource.cache
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.csproj.CoreCompileInputs.cache
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.exe
+C:\Users\Pato\Desktop\WR-Gestion\WR-Gestion\Deposito\obj\Debug\Deposito.pdb
